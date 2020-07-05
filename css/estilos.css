@@ -1,0 +1,148 @@
+:root {
+  --main-color: #f13454;
+  --main-transparent: rgba(241, 52, 84, 0.3);
+  --secondary-color: whitesmoke;
+  --text-color: whitesmoke;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  padding: 0;
+}
+
+#main-button {
+  cursor: pointer;
+}
+.header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  top: 0;
+  position: relative;
+}
+
+.action-button {
+  width: 120px;
+  display: flex;
+  margin: 0 auto;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  background-color: var(--secondary-color);
+}
+
+.action-button:hover {
+  cursor: pointer;
+  background: rgba(256, 256, 256, 0.8);
+}
+
+.button-img {
+  background-image: url("/images/pokedex.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+}
+
+.button-text {
+  font-weight: bold;
+  font-size: 14px;
+  font-style: italic;
+  text-transform: uppercase;
+  color: var(--main-color);
+  margin-right: 10px;
+}
+
+#main {
+  width: 100%;
+  margin: 0;
+  background-color: rgba(241, 52, 84, 0.1);
+  position: absolute;
+  display: none;
+}
+
+.main-container {
+  display: grid;
+  max-width: 90%;
+  margin: 0 auto;
+  border: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-self: center;
+  align-items: center;
+  grid-gap: 40px;
+  padding: 5px;
+  margin-top: 50px;
+}
+
+.poke-card {
+  position: relative;
+  background-color: rgba(256, 256, 256, 0.4);
+  cursor: pointer;
+  display: block;
+  box-shadow: 2px 2px 10px var(--secondary-color);
+  border-radius: 10%;
+  padding: 20px;
+}
+
+.poke-image {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.poke-image img {
+  width: 100%;
+  vertical-align: top;
+}
+
+.card-overlay {
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  border-radius: 10%;
+  text-transform: capitalize;
+}
+
+.card-attribute {
+  width: 80px;
+  margin: 5px;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+}
+
+.poke-card:hover .card-overlay {
+  display: flex;
+}
+
+.fadeIn {
+  animation: 10000ms;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
